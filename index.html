@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HBD MY HUSBAND ⚔️ วันเกิดเด็กชายปริ๊นซ์</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Great+Vibes&family=Noto+Sans+Thai:wght@400;600;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #f4d03f;
+      --gold-bright: #ffe566;
+      --purple: #7b2cbf;
+      --cyan: #4cc9f0;
+      --bg-dark: #07031a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      min-height: 100%;
+      background: var(--bg-dark);
+      color: #fff;
+      font-family: 'Noto Sans Thai', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .scene {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px 48px;
+      isolation: isolate;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(7,3,26,.35) 0%, rgba(7,3,26,.55) 50%, rgba(7,3,26,.85) 100%),
+        url('bg.jpg') center / cover no-repeat;
+      z-index: -2;
+      filter: saturate(1.15) contrast(1.05);
+    }
+
+    .vignette {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 40%, transparent 30%, rgba(0,0,0,.55) 100%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    #sparkles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .header {
+      text-align: center;
+      z-index: 5;
+      margin-bottom: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      border: 1px solid rgba(244,208,63,.45);
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(20,8,40,.55);
+      backdrop-filter: blur(8px);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      box-shadow: 0 0 20px rgba(123,44,191,.35);
+    }
+
+    .title {
+      font-family: 'Cinzel Decorative', serif;
+      font-weight: 900;
+      font-size: clamp(28px, 7vw, 64px);
+      line-height: 1.1;
+      background: linear-gradient(180deg, #fff6c2 0%, #f4d03f 40%, #c9a227 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 40px rgba(244,208,63,.35);
+      filter: drop-shadow(0 6px 0 rgba(80,30,0,.35));
+      animation: titlePulse 3s ease-in-out infinite;
+    }
+
+    .subtitle {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(28px, 5vw, 48px);
+      color: #e0b0ff;
+      margin-top: 4px;
+      text-shadow: 0 0 18px rgba(123,44,191,.8);
+    }
+
+    .wish {
+      font-size: 14px;
+      color: rgba(255,255,255,.75);
+      margin-top: 6px;
+      letter-spacing: .5px;
+    }
+
+    @keyframes titlePulse {
+      0%, 100% { filter: drop-shadow(0 6px 0 rgba(80,30,0,.35)) drop-shadow(0 0 12px rgba(244,208,63,.25)); }
+      50% { filter: drop-shadow(0 6px 0 rgba(80,30,0,.35)) drop-shadow(0 0 28px rgba(244,208,63,.7)); }
+    }
+
+    .cake-stage {
+      position: relative;
+      width: min(520px, 94vw);
+      margin: 12px auto 20px;
+      z-index: 4;
+    }
+
+    .cake-glow {
+      position: absolute;
+      inset: 18% 8% 4% 8%;
+      background: radial-gradient(ellipse, rgba(76,201,240,.28), transparent 70%);
+      filter: blur(28px);
+      z-index: 0;
+      animation: glowBreath 4s ease-in-out infinite;
+    }
+
+    @keyframes glowBreath {
+      0%,100% { opacity: .55; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.06); }
+    }
+
+    .cake {
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: block;
+      z-index: 1;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,.65));
+      animation: floatCake 6s ease-in-out infinite;
+      border-radius: 8px;
+    }
+
+    @keyframes floatCake {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Flames overlaid on the generated cake candles */
+    .flame {
+      position: absolute;
+      width: 18px;
+      height: 32px;
+      transform: translateX(-50%);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 3;
+      filter: blur(.2px);
+    }
+
+    .flame::before,
+    .flame::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    }
+
+    .flame::before {
+      width: 14px;
+      height: 26px;
+      background: radial-gradient(circle at 50% 80%, #fff8c8 0%, #ffd166 25%, #ff6b35 70%, transparent 100%);
+      animation: flicker 0.18s infinite alternate;
+      box-shadow: 0 0 14px 6px rgba(255,170,40,.65), 0 0 30px 10px rgba(255,80,20,.35);
+    }
+
+    .flame::after {
+      width: 7px;
+      height: 14px;
+      bottom: 6px;
+      background: #fffbe8;
+      animation: flicker 0.12s infinite alternate-reverse;
+      opacity: .9;
+    }
+
+    .lit .flame { opacity: 1; }
+
+    @keyframes flicker {
+      0% { transform: translateX(-50%) scaleY(1) scaleX(1) rotate(-2deg); }
+      100% { transform: translateX(-50%) scaleY(1.12) scaleX(.88) rotate(3deg); }
+    }
+
+    /* Approximate candle positions on the generated cake image */
+    .f1 { left: 21.5%; top: 6.8%; }
+    .f2 { left: 36.2%; top: 5.2%; }
+    .f3 { left: 50.4%; top: 4.6%; }
+    .f4 { left: 64.2%; top: 5.2%; }
+    .f5 { left: 78.6%; top: 6.8%; }
+
+    .controls {
+      z-index: 6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      font-family: 'Noto Sans Thai', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: #1a0a00;
+      background: linear-gradient(180deg, #ffe566 0%, #f4d03f 45%, #c9a227 100%);
+      border: none;
+      padding: 14px 36px;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow:
+        0 0 0 2px rgba(255,230,120,.4),
+        0 8px 0 #7a5a10,
+        0 12px 30px rgba(244,208,63,.45);
+      transition: transform .15s ease, box-shadow .15s ease, filter .15s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    .btn:active {
+      transform: translateY(6px);
+      box-shadow:
+        0 0 0 2px rgba(255,230,120,.4),
+        0 2px 0 #7a5a10,
+        0 6px 16px rgba(244,208,63,.35);
+    }
+
+    .btn.disabled {
+      opacity: .55;
+      cursor: default;
+      transform: none;
+    }
+
+    .hint {
+      font-size: 13px;
+      color: rgba(255,255,255,.6);
+    }
+
+    .footer {
+      margin-top: 28px;
+      font-size: 12px;
+      color: rgba(255,255,255,.4);
+      letter-spacing: 2px;
+      font-family: 'Cinzel', serif;
+    }
+
+    #confetti {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    /* message after lighting */
+    .blessing {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all .8s ease;
+      text-align: center;
+      margin-top: 4px;
+      color: var(--gold-bright);
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    .blessing.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+      .flame { width: 14px; height: 24px; }
+      .flame::before { width: 11px; height: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="vignette"></div>
+  <canvas id="sparkles"></canvas>
+  <canvas id="confetti"></canvas>
+
+  <div class="scene">
+    <header class="header">
+      <div class="badge">Arena of Valor • Birthday Skin</div>
+      <h1 class="title">HBD MY HUSBAND</h1>
+      <div class="subtitle">สุขสันต์วันเกิดพี่ปริ๊นซ์</div>
+      <p class="wish">สุขภาพแข็งแรง น่ารักๆ ขอให้หัวร้อนน้อยลง เล่นเกมอย่างมีสติ</p>
+    </header>
+
+    <div class="cake-stage" id="stage">
+      <div class="cake-glow"></div>
+      <img class="cake" src="cake.jpg" alt="ROV style birthday cake" />
+      <div class="flame f1" data-i="1"></div>
+      <div class="flame f2" data-i="2"></div>
+      <div class="flame f3" data-i="3"></div>
+      <div class="flame f4" data-i="4"></div>
+      <div class="flame f5" data-i="5"></div>
+    </div>
+
+    <div class="controls">
+      <button class="btn" id="lightBtn">✨ จุดเทียนให้สามี ✨</button>
+      <p class="hint">แตะปุ่มเพื่อจุดเทียนทั้ง 5 เล่ม • กดอีกครั้งเพื่อเป่าดับ</p>
+      <p class="blessing" id="blessing">MAY YOUR RANK RISE &amp; YOUR LOVE NEVER TILT</p>
+    </div>
+
+    <div class="footer">FOR MY HUSBAND</div>
+  </div>
+
+  <script>
+    const stage = document.getElementById('stage');
+    const btn = document.getElementById('lightBtn');
+    const blessing = document.getElementById('blessing');
+    const flames = [...document.querySelectorAll('.flame')];
+    let lit = false;
+
+    function playChime() {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const notes = lit ? [523.25, 659.25, 783.99, 1046.5] : [392, 349.23, 329.63];
+        notes.forEach((freq, i) => {
+          const o = ctx.createOscillator();
+          const g = ctx.createGain();
+          o.type = 'triangle';
+          o.frequency.value = freq;
+          g.gain.value = 0.0001;
+          o.connect(g); g.connect(ctx.destination);
+          const t = ctx.currentTime + i * 0.12;
+          g.gain.exponentialRampToValueAtTime(0.08, t + 0.02);
+          g.gain.exponentialRampToValueAtTime(0.0001, t + 0.45);
+          o.start(t); o.stop(t + 0.5);
+        });
+      } catch (e) {}
+    }
+
+    function lightCandles() {
+      flames.forEach((f, i) => {
+        setTimeout(() => {
+          stage.classList.add('lit');
+          f.style.opacity = '1';
+        }, i * 180);
+      });
+      blessing.classList.add('show');
+      btn.textContent = '💨 เป่าเทียน';
+      burstConfetti();
+      playChime();
+      lit = true;
+    }
+
+    function extinguish() {
+      flames.forEach(f => f.style.opacity = '0');
+      stage.classList.remove('lit');
+      blessing.classList.remove('show');
+      btn.textContent = '✨ จุดเทียนให้สามี ✨';
+      playChime();
+      lit = false;
+    }
+
+    btn.addEventListener('click', () => lit ? extinguish() : lightCandles());
+
+    /* sparkle field */
+    (function sparkles() {
+      const c = document.getElementById('sparkles');
+      const ctx = c.getContext('2d');
+      let w, h, dots;
+      function resize() {
+        w = c.width = innerWidth;
+        h = c.height = innerHeight;
+        dots = Array.from({length: 70}, () => ({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: Math.random() * 1.6 + .3,
+          s: Math.random() * .4 + .1,
+          a: Math.random()
+        }));
+      }
+      addEventListener('resize', resize); resize();
+      function tick() {
+        ctx.clearRect(0,0,w,h);
+        dots.forEach(d => {
+          d.y -= d.s;
+          d.a += 0.02;
+          if (d.y < -4) { d.y = h + 4; d.x = Math.random() * w; }
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(255, 230, 140, ${0.25 + Math.sin(d.a)*0.25})`;
+          ctx.arc(d.x, d.y, d.r, 0, Math.PI*2);
+          ctx.fill();
+        });
+        requestAnimationFrame(tick);
+      }
+      tick();
+    })();
+
+    /* confetti */
+    const confettiCanvas = document.getElementById('confetti');
+    const cctx = confettiCanvas.getContext('2d');
+    let pieces = [];
+
+    function resizeConfetti() {
+      confettiCanvas.width = innerWidth;
+      confettiCanvas.height = innerHeight;
+    }
+    addEventListener('resize', resizeConfetti); resizeConfetti();
+
+    function burstConfetti() {
+      const colors = ['#f4d03f','#ffe566','#c77dff','#4cc9f0','#ff6b6b','#ffffff'];
+      for (let i = 0; i < 160; i++) {
+        pieces.push({
+          x: innerWidth / 2 + (Math.random()-0.5)*220,
+          y: innerHeight * 0.22,
+          vx: (Math.random()-0.5) * 9,
+          vy: Math.random() * -10 - 4,
+          w: Math.random()*8+4,
+          h: Math.random()*6+3,
+          rot: Math.random()*360,
+          vr: (Math.random()-0.5)*12,
+          color: colors[i % colors.length],
+          life: 180 + Math.random()*60
+        });
+      }
+    }
+
+    function confettiLoop() {
+      cctx.clearRect(0,0,confettiCanvas.width, confettiCanvas.height);
+      pieces = pieces.filter(p => p.life > 0);
+      pieces.forEach(p => {
+        p.vy += 0.18;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.rot += p.vr;
+        p.life--;
+        cctx.save();
+        cctx.translate(p.x, p.y);
+        cctx.rotate(p.rot * Math.PI/180);
+        cctx.globalAlpha = Math.max(0, p.life / 180);
+        cctx.fillStyle = p.color;
+        cctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+        cctx.restore();
+      });
+      requestAnimationFrame(confettiLoop);
+    }
+    confettiLoop();
+  </script>
+</body>
+</html>
